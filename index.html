@@ -5,29 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sierpinski Triangle</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 40px;
+        }
         canvas {
-            border: 1px solid black;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        #explanation {
+            flex: 1;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #3498db;
+        }
+        ul, ol {
+            padding-left: 20px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 10px;
+            background-color: #ecf0f1;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
-    <h1>Sierpinski Triangle</h1>
-    <div style="display: flex; justify-content: space-between; max-width: 1200px; margin: 0 auto;">
+    <h1>Sierpinski Triangle Generator</h1>
+    <div class="container">
         <canvas id="canvas" width="600" height="520"></canvas>
-        <div id="explanation" style="width: 45%; margin-left: 20px;">
+        <div id="explanation">
             <h2>How it works:</h2>
             <ol>
-                <li>This method starts with a triangle and a random point inside it.</li>
-                <li>It then repeatedly:
+                <li>Start with a triangle and a random point inside it.</li>
+                <li>Repeatedly:
                     <ul>
-                        <li>Selects a random vertex of the triangle</li>
-                        <li>Draws a point halfway between the current point and the selected vertex</li>
-                        <li>Uses this new point as the starting point for the next iteration</li>
+                        <li>Select a random vertex of the triangle</li>
+                        <li>Draw a point halfway between the current point and the selected vertex</li>
+                        <li>Use this new point as the starting point for the next iteration</li>
                     </ul>
                 </li>
-                <li>As this process continues, a fractal pattern emerges: the Sierpinski Triangle.</li>
+                <li>As this process continues, the Sierpinski Triangle fractal pattern emerges.</li>
             </ol>
-            <p>What makes this interesting is that from simple rules and randomness, a complex and beautiful geometric pattern emerges. This demonstrates how order can arise from chaos, a concept found in many natural phenomena, such as:</p>
+            <h2>Why it's interesting:</h2>
+            <p>This demonstrates how complex patterns can emerge from simple rules and randomness. Similar phenomena occur in nature, such as:</p>
             <ul>
                 <li>Snowflake formation</li>
                 <li>Plant growth patterns (e.g., ferns, romanesco broccoli)</li>
@@ -36,20 +76,12 @@
                 <li>Crystal growth</li>
                 <li>Galaxy formation</li>
             </ul>
-            <p>These phenomena, like the Sierpinski Triangle, exhibit complex structures that emerge from simple underlying rules or processes.</p>        </div>
+            <p>These phenomena, like the Sierpinski Triangle, exhibit complex structures that emerge from simple underlying processes, illustrating how order can arise from chaos.</p>
+        </div>
     </div>
-    <style>
-        #explanation {
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-    </style>
     <script src="sierpinski.js"></script>
-    <footer style="text-align: center; margin-top: 20px; padding: 10px; background-color: #f0f0f0;">
-        <p>Developed with assistance from Claude AI. Code available at <a href="https://github.com/mihirk11/sierpinski-triangle-js" target="_blank">https://github.com/mihirk11/sierpinski-triangle-js</a></p>
+    <footer>
+        <p>Developed with assistance from Claude AI. Code available on <a href="https://github.com/mihirk11/sierpinski-triangle-js" target="_blank">GitHub</a></p>
     </footer>
 </body>
 </html>
