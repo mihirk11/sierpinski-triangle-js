@@ -7,7 +7,7 @@ canvas.height = 520;
 
 // Store points in memory
 let points = [];
-let delay = 2000;
+let delay = 5000;
 let pointCount = 0; 
 const MAX_ITERATIONS = 1000000; // Maximum number of iterations
 
@@ -104,8 +104,8 @@ function chaosGame(startX, startY) {
         y = midY;
 
         pointCount++;
-        if (pointCount % 10 === 0 && delay > 50) {
-            delay = Math.max(0, delay * 0.4); // Decrease delay, but not below 50ms
+        if (pointCount % 10 === 0 && delay > 0) {
+            delay = Math.max(0, delay * 0.7); // Decrease delay, but not below 50ms
         }
 
         // Check if we've reached the maximum number of iterations
