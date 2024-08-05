@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sierpinski Triangle</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sierpinski Triangle</h1>
+    <div style="display: flex; justify-content: space-between; max-width: 1200px; margin: 0 auto;">
+        <canvas id="canvas" width="600" height="520"></canvas>
+        <div id="explanation" style="width: 45%; margin-left: 20px;">
+            <h2>How it works:</h2>
+            <ol>
+                <li>This method starts with a triangle and a random point inside it.</li>
+                <li>It then repeatedly:
+                    <ul>
+                        <li>Selects a random vertex of the triangle</li>
+                        <li>Draws a point halfway between the current point and the selected vertex</li>
+                        <li>Uses this new point as the starting point for the next iteration</li>
+                    </ul>
+                </li>
+                <li>As this process continues, a fractal pattern emerges: the Sierpinski Triangle.</li>
+            </ol>
+            <p>What makes this interesting is that from simple rules and randomness, a complex and beautiful geometric pattern emerges. This demonstrates how order can arise from chaos, a concept found in many natural phenomena, such as:</p>
+            <ul>
+                <li>Snowflake formation</li>
+                <li>Plant growth patterns (e.g., ferns, romanesco broccoli)</li>
+                <li>River networks and drainage patterns</li>
+                <li>Lightning branching</li>
+                <li>Crystal growth</li>
+                <li>Galaxy formation</li>
+            </ul>
+            <p>These phenomena, like the Sierpinski Triangle, exhibit complex structures that emerge from simple underlying rules or processes.</p>        </div>
+    </div>
+    <style>
+        #explanation {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+    <script src="sierpinski.js"></script>
+    <footer style="text-align: center; margin-top: 20px; padding: 10px; background-color: #f0f0f0;">
+        <p>Developed with assistance from Claude AI. Code available at <a href="https://github.com/mihirk11/sierpinski-triangle-js" target="_blank">https://github.com/mihirk11/sierpinski-triangle-js</a></p>
+    </footer>
+</body>
+</html>
